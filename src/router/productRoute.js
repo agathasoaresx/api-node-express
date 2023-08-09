@@ -12,13 +12,21 @@ router.get('/', (req, res) => {
     } )
 
 router.post('/', (req, res) => {
-        // pegar os dados
-        res.json({message: "Produto criado com sucesso"})
+    const dados = req.body
+    // pegar os dados
+    res.json({
+        message: "Produto criado com sucesso",
+        dados: dados
+    })
 })
 
 router.put('/', (req, res) => {
     // Update
-    res.json({message: "Produto atualizado com sucesso"})  
+    const dados = req.body
+
+    res.json({
+        message: "Produto atualizado com sucesso",
+        dados: dados})  
 })
 
 router.delete('/', (req, res) => { 

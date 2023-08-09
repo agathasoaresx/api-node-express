@@ -14,7 +14,7 @@
             "method": "GET",
             "sortNum": 10000,
             "created": "2023-08-09T00:23:47.885Z",
-            "modified": "2023-08-09T00:23:47.885Z",
+            "modified": "2023-08-09T01:18:55.853Z",
             "headers": [],
             "params": [],
             "tests": []
@@ -28,9 +28,14 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2023-08-09T00:24:21.120Z",
-            "modified": "2023-08-09T00:24:21.120Z",
+            "modified": "2023-08-09T01:15:37.075Z",
             "headers": [],
             "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"camiseta\",\n  \"valor\": 100,\n  \"marca\": \"nike\",\n  \"estoque\": 20\n}",
+                "form": []
+            },
             "tests": []
         },
         {
@@ -42,9 +47,14 @@
             "method": "PUT",
             "sortNum": 30000,
             "created": "2023-08-09T00:24:47.296Z",
-            "modified": "2023-08-09T00:24:47.296Z",
+            "modified": "2023-08-09T01:19:14.191Z",
             "headers": [],
             "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"camiseta\",\n  \"valor\": 100,\n  \"marca\": \"nike\",\n  \"estoque\": 20\n}",
+                "form": []
+            },
             "tests": []
         },
         {
