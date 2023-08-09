@@ -12,7 +12,6 @@ api.get('/', (req, res) => {
 } )
 
 api.use('/user', userRoute)
-
 api.use('/product', productRoute)
 
 api.listen(PORT, () => {
