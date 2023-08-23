@@ -1,27 +1,20 @@
-import user from "../../models/userModel.js" 
+import user from '../../models/userModel.js'
 
 const createUser = async (req, res) => {
-   try{
-        const res = await user.create(req.body)
-        console.log(result)
-        const [result] = res
-
-        if(result.affectedRows === 1){
-            res.status(201).json({message: 'User created',
-            user:
-                {
+    try{
+        const [result] = await user.create(req.body)
+        if(result.affectedRows === 1) {
+            res.status(201).json({message: 'User Created',
+                user:{
                     id: result.insertId,
-                    ...user
-                 }
+                    ...req.body
+                }
             })
         }
-    
-
-   }catch(err){
-         console.log(err)
-         res.status(500).json({message: "Internal server error"})
-   }
-    
+    } catch(err) {
+        console.log(err)
+        res.status(500).json({message: 'Server Error'})
+    }
 }
 
 export default createUser
