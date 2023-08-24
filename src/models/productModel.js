@@ -14,7 +14,7 @@ const get = async (id) => {
 }
 
 const update = async (product) => {
-    const {name, category, stock, price, brand} = product
+    const {id, name, category, stock, price, brand} = product
     return await db.query('UPDATE products SET name = ?, category = ?, stock = ?, price = ?, brand = ? WHERE id = ?', [name, category, stock, price, brand, id])
 }
 
