@@ -9,8 +9,8 @@ const get = async (id) => {
 }
 
 const create = async (user) => {
-    const {name, email, pass} = user
-    return await db.query('INSERT INTO users (name, email, pass) VALUES (?, ?, ?)', [name, email, pass])
+    const {name, email, pass, photo} = user
+    return await db.query('INSERT INTO users (name, email, pass, photo) VALUES (?, ?, ?, ?)', [name, email, pass, photo])
 }
 
 const del = async (id) => {
@@ -18,8 +18,8 @@ const del = async (id) => {
 }
 
 const update = async (user) => {
-    const {id, name, email, pass} = user
-    return await db.query('UPDATE users SET name = ?, email = ?, pass = ? WHERE id = ?', [name, email, pass, id])
+    const {id, name, email, pass, photo} = user
+    return await db.query('UPDATE users SET name = ?, email = ?, pass = ?, photo = ? WHERE id = ?', [name, email, pass, photo, id])
 }
 
 export default {list, get, create, del, update}
